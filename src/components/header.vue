@@ -11,7 +11,7 @@
         <p>
           <strong>{{portfolioName}}</strong> <small><a href="https://twitter.com/aziz_grh"> @aziz_grh</a></small>
           <br>
-          Developer, Passionate about learning new technologies and especially the open source 
+          Developer, Passionate about learning new technologies and especially the open source.
           <strong>JavaScript</strong> and <strong>linux</strong> lover.
         </p>
       </div>
