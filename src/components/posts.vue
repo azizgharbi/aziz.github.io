@@ -38,7 +38,7 @@ export default {
 
 @media only screen and (min-width: 768px) {
   .section{
-    min-height: 570px;
+    min-height: 580px;;
   }
 }
 .container{
