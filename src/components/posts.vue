@@ -9,7 +9,9 @@
   <footer class="card-footer">
     <p class="card-footer-item">
       <span>
-        Share on <a class="twitter-share-button" href="https://twitter.com/intent/tweet">Twitter</a>
+        <router-link class="button is-link is-small" :to="{name: 'details', params: { id: post.id } }">
+          Read more  <i class="fas fa-angle-right"></i>
+        </router-link>
       </span>
     </p>
   </footer>
@@ -22,7 +24,11 @@ export default {
   name: 'Posts',
   data(){
       return {
-          posts : ["post1", "post2","post3"]
+          posts : [
+            {id:1,description:"abc"},
+            {id:2,description:"abc"},
+            {id:3,description:"abc"}
+          ]
       }
   }
 }
@@ -32,6 +38,9 @@ export default {
 .container{
     margin-top: 20px;
     margin-bottom: 20px
+}
+.card{
+  margin-bottom: 10px;
 }
 </style>
 

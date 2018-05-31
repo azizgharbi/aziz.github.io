@@ -25,6 +25,9 @@ export default {
         left: 0;
     } 
 }
+.fa-heart{
+  color: #8e44ad;
+}
 
 </style>
 
