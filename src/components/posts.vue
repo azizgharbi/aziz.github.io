@@ -4,7 +4,7 @@
 <div class="card" v-for=" post in posts" :key= "post.id"> 
   <div class="card-content">
     <p class="title">
-      “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
+      “petite a petit l'oiseau fait son nid.”
     </p>
   </div>
   <footer class="card-footer">
