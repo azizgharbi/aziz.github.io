@@ -4,7 +4,7 @@
 <div class="card" v-for=" post in posts" :key= "post.id"> 
   <div class="card-content">
     <p class="title">
-      “petite a petit l'oiseau fait son nid.”
+      {{post.title}}
     </p>
   </div>
   <footer class="card-footer">
@@ -22,14 +22,23 @@
 </template>
 
 <script>
+//firebase
+import firebase from 'firebase'
+import {config} from './../config/config'
+
+firebase.initializeApp(config)
+
+const database = firebase.database()
+
 export default {
   name: 'Posts',
   data(){
       return {
-          posts : [
-            {id:1,description:"abc"}
-          ]
+          posts : []
       }
+  },
+   created () {
+      database.ref('posts').on('child_added', post => this.posts.push(post.val()))
   }
 }
 </script>
