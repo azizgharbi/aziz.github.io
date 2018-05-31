@@ -17,14 +17,6 @@ export default {
 </script>
 
 <style>
-@media only screen and (min-width: 768px) {
-   .footer { 
-        position: fixed; 
-        bottom: 0;
-        right: 0;
-        left: 0;
-    } 
-}
 .fa-heart{
   color: #8e44ad;
 }

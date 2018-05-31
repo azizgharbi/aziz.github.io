@@ -1,5 +1,6 @@
 <template>
-<section class="container">
+<section class="section">
+<div class="container">
 <div class="card" v-for=" post in posts" :key= "post.id"> 
   <div class="card-content">
     <p class="title">
@@ -16,6 +17,7 @@
     </p>
   </footer>
 </div>
+</div>
 </section>
 </template>
 
@@ -25,9 +27,7 @@ export default {
   data(){
       return {
           posts : [
-            {id:1,description:"abc"},
-            {id:2,description:"abc"},
-            {id:3,description:"abc"}
+            {id:1,description:"abc"}
           ]
       }
   }
@@ -35,10 +35,16 @@ export default {
 </script>
 
 <style>
-.container{
-    margin-top: 20px;
-    margin-bottom: 20px
+
+@media only screen and (min-width: 768px) {
+  .section{
+    min-height: 570px;
+  }
 }
+.container{
+  margin-top: 20px;
+}
+
 .card{
   margin-bottom: 10px;
 }
