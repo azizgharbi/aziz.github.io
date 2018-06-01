@@ -23,12 +23,7 @@
 
 <script>
 //firebase
-import firebase from 'firebase'
-import {config} from './../config/config'
-
-firebase.initializeApp(config)
-
-const database = firebase.database()
+import {posts} from './../config/config'
 
 export default {
   name: 'Posts',
@@ -38,7 +33,7 @@ export default {
       }
   },
    created () {
-      database.ref('posts').on('child_added', post => this.posts.push(post.val()))
+      posts.on('child_added', post => this.posts.push(post.val()))
   }
 }
 </script>
