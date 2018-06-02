@@ -12,6 +12,9 @@ import Details from './components/details.vue'
 import Create from './components/admin/admin.create.vue'
 import Show from './components/admin/admin.show.vue'
 import Edit from './components/admin/admin.edit.vue'
+//auth
+import Login from './components/auth/login.vue'
+
 
 
 
@@ -30,9 +33,8 @@ const routes = [
   { path: '/dashboard/create', name : "create", component: Create },
   { path: '/dashboard/show', name : "show", component: Show },
   { path: '/dashboard/edit/:id', name : "edit", component: Edit },
-
-
-
+  //login
+  { path: '/login', name : "login", component: Login },
 ]
 
 const router = new VueRouter({
