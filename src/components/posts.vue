@@ -33,7 +33,7 @@ export default {
       }
   },
    created () {
-      posts.on('child_added', post => this.posts.push(post.val()))
+      posts.on('child_added', post => this.posts.push({...post.val(), id: post.key }))
   }
 }
 </script>
