@@ -39,6 +39,7 @@ const router = new VueRouter({
   routes 
 })
 
+
 new Vue({
   store:store,
   router,

@@ -8,7 +8,7 @@
                <div class="control">
                   <input class="input" type="text" v-model="email" placeholder="Enter your email or phone...">
                </div>
-                 <p class="help is-danger">This email is invalid</p>
+                 <p v-show = "error" class="help is-danger">{{error.message}}</p>
             </div>
          </div>
       </div>
@@ -19,7 +19,6 @@
                <div class="control">
                   <input class="input" type="password" v-model="password" placeholder="Enter your password...">
                </div>
-                <p class="help is-danger">This email is invalid</p>
             </div>
          </div>
       </div>
@@ -27,7 +26,7 @@
          <div class="column is-6">
             <div class="field is-grouped is-pulled-right">
                <div class="control">
-                  <button class="button is-link">Login</button>
+                  <button class="button is-link" @click="signIn()">Login</button>
                </div>
             </div>
          </div>
@@ -52,13 +51,12 @@ export default {
 
     methods: {
         signIn(){
-           databaseConfig.auth().signInWithEmailAndPassword(this.email, this.password)
+           databaseConfig.auth().signInWithEmailAndPassword(this.email, this.password).then(()=>{
+               this.$router.replace("dashboard/create")
+           }).catch((error)=>{
+               this.error = error
+           })
        }
-    },
-        created(){
-            databaseConfig.auth().onAuthStateChanged(user => { 
-             this.$store.commit('setAuthUser',user);
-        })
     }
 }
 </script>
