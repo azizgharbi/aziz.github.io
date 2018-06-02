@@ -29,7 +29,7 @@
 </template>
 <script>
 //firebase
-import {posts} from './../../config/config'
+import {posts} from './../../config/posts.config'
 import { quillEditor } from 'vue-quill-editor'
 import 'quill/dist/quill.snow.css'
 

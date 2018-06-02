@@ -23,7 +23,7 @@
 
 <script>
 //firebase
-import {posts} from './../config/config'
+import {posts} from './../config/posts.config'
 
 export default {
   name: 'Posts',

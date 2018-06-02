@@ -14,11 +14,8 @@ import Show from './components/admin/admin.show.vue'
 import Edit from './components/admin/admin.edit.vue'
 //auth
 import Login from './components/auth/login.vue'
-
-
-
-
-
+//store
+import { store } from "./store/store";
 
 Vue.config.productionTip = false
 
@@ -43,6 +40,7 @@ const router = new VueRouter({
 })
 
 new Vue({
+  store:store,
   router,
   render: h => h(App)
 }).$mount('#app')
