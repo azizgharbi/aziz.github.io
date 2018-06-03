@@ -12,7 +12,8 @@
           <strong>{{portfolioName}}</strong> <small><a href="https://twitter.com/aziz_grh"> @aziz_grh</a></small>
           <br>
           Developer, Passionate about learning new technologies and especially the open source.
-          <strong>JavaScript</strong> and <strong>linux</strong> lover.
+          <strong>JavaScript</strong> and <strong>linux</strong> lover. <a  @click="signOut()"> Logout </a>
+          <span v-show = "error">{{error.message}}</span>
         </p>
       </div>
       <nav class="level is-mobile">
@@ -40,10 +41,31 @@
 </template>
 
 <script>
+import {databaseConfig} from "./../config/firebase.config"
+
 export default {
   name: 'Header',
+  data(){
+    return{
+      error : {}
+    }
+  },
   props: {
     portfolioName: String
+  },
+  computed:{
+    user(){
+      return databaseConfig.auth().currentUser
+    }
+  },
+  methods:{
+    signOut(){
+      databaseConfig.auth().signOut().then(()=>{
+        this.$router.replace("/login")
+      }).catch(error => {
+          this.error = error
+      })
+    }
   }
 }
 </script>
