@@ -6,7 +6,8 @@
 
 ### commande to generate your user
 
-```node src/console/register.me.js  example@example.com  password
+```
+node src/console/register.me.js  example@example.com  password
 ```
 
 
