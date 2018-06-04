@@ -9,7 +9,12 @@
     <div class="media-content">
       <div class="content">
         <p>
-          <strong>{{portfolioName}}</strong> <small><a href="https://twitter.com/aziz_grh"> @aziz_grh</a></small>
+          <strong>{{portfolioName}}</strong> <small>
+            <router-link  :to="{name: 'login' }">
+            @aziz_grh
+            </router-link>
+          </small>
+     
           <br>
           Developer, Passionate about learning new technologies and especially the open source.
           <strong>JavaScript</strong> and <strong>linux</strong> lover.
