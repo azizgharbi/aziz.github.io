@@ -59,8 +59,12 @@ export default {
 
     methods: {
         editPost(){
-            posts.child(this.$route.params.id).update({title: this.post.title,description : this.post.description})
-            this.$toast.open('Post edited') 
+            if(this.title && this.description){
+                posts.child(this.$route.params.id).update({title: this.post.title,description : this.post.description})
+                this.$toast.open('Post edited')
+            }else{
+                this.$toast.open('Title and description are required')
+            }
         }
     },
     created(){

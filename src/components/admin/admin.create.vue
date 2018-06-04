@@ -60,10 +60,16 @@ export default {
 
     methods: {
         addPost(){
-            posts.push().set({title:this.title,description:this.description})
-            this.title = ""
-            this.description = ""
-            this.$toast.open('Post created') 
+            if(this.title && this.description){
+                posts.push().set({title:this.title,description:this.description})
+                this.title = ""
+                this.description = ""
+                this.$toast.open('Post created')
+            }else{
+                this.$toast.open('Title and description are required')
+            }
+
+
         }   
     }
 }
