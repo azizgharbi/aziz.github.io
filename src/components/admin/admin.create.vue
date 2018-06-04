@@ -61,6 +61,9 @@ export default {
     methods: {
         addPost(){
             posts.push().set({title:this.title,description:this.description})
+            this.title = ""
+            this.description = ""
+            this.$toast.open('Post created') 
         }   
     }
 }
