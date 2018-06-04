@@ -1,6 +1,7 @@
 <template>
    <section class="section">
       <div class="container">
+          <form @submit.prevent="addPost()">
             <div class="field">
                <label class="label">Title</label>
                <div class="control">
@@ -18,9 +19,10 @@
             </div>
             <div class="field is-grouped is-pulled-right">
                <div class="control">
-                  <button class="button is-link" @click="addPost()">Submit</button>
+                  <input class="button is-link" type="submit" value="Submit">
                </div>
             </div>
+          </form>
         <router-link class="button is-link is-small" :to="{name: 'show' }">
              show all posts  <i class="fas fa-angle-right"></i>
         </router-link>

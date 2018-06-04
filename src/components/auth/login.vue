@@ -1,6 +1,7 @@
 <template>
 <section class="section">
    <div class="container">
+       <form @submit.prevent="signIn()">
       <div class="columns is-mobile">
          <div class="column is-6">
             <div class="field">
@@ -26,11 +27,12 @@
          <div class="column is-6">
             <div class="field is-grouped is-pulled-right">
                <div class="control">
-                  <button class="button is-link" @click="signIn()">Login</button>
+                  <input class="button is-link" type="submit" value="Login"/>
                </div>
             </div>
          </div>
       </div>
+       </form>
    </div>
 </section>
 </template>
