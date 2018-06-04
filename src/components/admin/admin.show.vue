@@ -47,17 +47,19 @@ import {posts} from './../../config/posts.config'
         },
         methods:{
             deletePosts(){
-                this.checkedRows.forEach(element => {
+                
                 this.$dialog.confirm({
                     message: 'Continue on this action?',
                     onConfirm: () => {
-                    posts.child(element.id).remove()
-                    this.data.splice(element.id,1)
+                        this.checkedRows.forEach(element => {
+                        posts.child(element.id).remove()
+                        this.data.splice(element.id,1)
+                     });
                     this.$toast.open('Post Deleted') 
                     }
                 })
                     
-                });
+               
             }
         },
         created(){
