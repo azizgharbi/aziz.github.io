@@ -54,7 +54,7 @@ export default {
     methods: {
         signIn(){
            databaseConfig.auth().signInWithEmailAndPassword(this.email, this.password).then(()=>{
-               this.$router.replace("/dashboard/create")
+               this.$router.replace("/dashboard/show")
            }).catch((error)=>{
                this.error = error
            })
