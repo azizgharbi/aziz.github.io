@@ -1,8 +1,5 @@
 const firebase = require('firebase');
-
-const config = {
-  // your firebase config
-};
+const config = require('./../config/config');
 
 var Args = process.argv.splice(2);
 
