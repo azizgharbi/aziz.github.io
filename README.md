@@ -2,7 +2,6 @@
 
 * vue-cli (vue-router)
 * buefy : [buefy.github.io](https://buefy.github.io/)
-* demo : [link-demo](https://azizgharbi.github.io/basic-blog-vue-cli/)
 
 ### commande to generate your user
 
