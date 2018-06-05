@@ -2,6 +2,8 @@
 
 * vue-cli (vue-router)
 * buefy : [buefy.github.io](https://buefy.github.io/)
+* demo on heroku : [azizgharbi.herokuapp.com](https://azizgharbi.herokuapp.com/)
+
 
 ### commande to generate your user
 
