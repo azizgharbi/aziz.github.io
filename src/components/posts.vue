@@ -11,7 +11,7 @@
     <p class="card-footer-item">
       <span>
         <router-link class="button is-link is-small" :to="{name: 'details', params: { id: post.id } }">
-          Read more  <i class="fas fa-angle-right"></i>
+          Read more &nbsp;<i class="fas fa-angle-right"></i>
         </router-link>
       </span>
     </p>
