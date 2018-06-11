@@ -3,7 +3,7 @@
    <div class="container">
        <form @submit.prevent="signIn()">
       <div class="columns is-mobile">
-         <div class="column is-6">
+         <div class="column is-8">
             <div class="field">
                <label class="label">Email or Phone</label>
                <div class="control">
@@ -14,7 +14,7 @@
          </div>
       </div>
       <div class="columns is-mobile">
-         <div class="column is-6">
+         <div class="column is-8">
             <div class="field">
                <label class="label">Password</label>
                <div class="control">
@@ -24,7 +24,7 @@
          </div>
       </div>
       <div class="columns is-mobile">
-         <div class="column is-6">
+         <div class="column is-8">
             <div class="field is-grouped is-pulled-right">
                <div class="control">
                   <input class="button is-link" type="submit" value="Login"/>
