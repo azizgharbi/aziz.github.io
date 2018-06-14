@@ -1,7 +1,9 @@
 <template>
 <section class="section">
 <div class="container">
-<div class="card" v-for=" project in projects" :key= "project.id" v-if="!project.fork"> 
+<div class="columns is-gapless is-multiline is-mobile project">
+  <div class="column is-one-third " v-for=" project in projects" :key= "project.id" v-if="!project.fork">
+<div class="card"> 
   <div class="card-content">
     <p class="title">
      {{project.name}}
@@ -16,6 +18,8 @@
   </footer>
 </div>
 </div>
+</div>
+   </div>
 </section>
 </template>
 
@@ -50,6 +54,9 @@ export default {
 
 .card{
   margin-bottom: 10px;
+}
+.card{
+  margin : 10px;
 }
 </style>
 
