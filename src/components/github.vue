@@ -1,7 +1,7 @@
 <template>
 <section class="section">
 <div class="container">
-<div class="card" v-for=" project in projects" :key= "project.id"> 
+<div class="card" v-for=" project in projects" :key= "project.id" v-if="!project.fork"> 
   <div class="card-content">
     <p class="title">
      {{project.name}}
@@ -31,9 +31,7 @@ export default {
   },
    created () {
       axios.get('https://api.github.com/users/azizgharbi/repos').then((response)=>{
-
-          if(!response.data.fork) this.projects = response.data
-          
+          this.projects = response.data  
       })
   }
 }
