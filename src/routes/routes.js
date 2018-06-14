@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 
 import Posts from './../components/posts.vue'
 import Details from './../components/details.vue'
+import Github from './../components/github.vue'
+
 
 //admin
 import Create from './../components/admin/admin.create.vue'
@@ -17,7 +19,8 @@ import {databaseConfig} from "./../config/firebase.config"
 Vue.use(VueRouter)
 
 const routes = [
-    { path: '', name : "home", component: Posts },
+    { path: '', name : "home", component: Github },
+    { path: '/blog', name : "blog", component: Posts },
     { path: '/post/:id', name: 'details', component: Details },
     //admin
     { path: '/dashboard/create', name : "create", component: Create , meta : {requiresAuth : true} },

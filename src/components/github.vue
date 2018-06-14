@@ -1,0 +1,57 @@
+<template>
+<section class="section">
+<div class="container">
+<div class="card" v-for=" project in projects" :key= "project.id"> 
+  <div class="card-content">
+    <p class="title">
+     {{project.name}}
+    </p>
+  </div>
+  <footer class="card-footer">
+    <p class="card-footer-item">
+      <span>
+        <a class="button is-link is-small" :href="project.html_url"  target="_blank"> check code &nbsp;<i class="fas fa-angle-right" ></i></a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+</section>
+</template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  name: 'Github',
+  data(){
+      return {
+          projects : []
+      }
+  },
+   created () {
+      axios.get('https://api.github.com/users/azizgharbi/repos').then((response)=>{
+
+          if(!response.data.fork) this.projects = response.data
+          
+      })
+  }
+}
+</script>
+
+<style>
+
+@media only screen and (min-width: 768px) {
+  .section{
+    min-height: 580px;;
+  }
+}
+.container{
+  margin-top: 20px;
+}
+
+.card{
+  margin-bottom: 10px;
+}
+</style>
+
