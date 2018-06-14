@@ -1,7 +1,6 @@
 <template>
 <section class="section">
-<div class="container">
-<div class="columns is-gapless is-multiline is-mobile project">
+<div class="columns is-gapless is-multiline is-half-mobile project">
   <div class="column is-one-third " v-for=" project in projects" :key= "project.id" v-if="!project.fork">
 <div class="card"> 
   <div class="card-content">
@@ -19,7 +18,6 @@
 </div>
 </div>
 </div>
-   </div>
 </section>
 </template>
 
