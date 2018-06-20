@@ -1,7 +1,7 @@
 <template>
 <section class="section">
     <div class="content" v-html="post.description"></div>
-<router-link class="button is-link is-small" :to="{name: 'home' }">
+<router-link class="button is-link is-small" :to="{name: 'blog' }">
     <i class="fas fa-angle-left"></i> &nbsp; Go back 
 </router-link>
 </section>
