@@ -35,22 +35,15 @@ const router = new VueRouter({
     routes 
   })
 
-var loggedUser = null
-
-  databaseConfig.auth().onAuthStateChanged(function(user) {
-    if (user) 
-        loggedUser = user
-    else 
-        loggedUser = null
-  });
 
   router.beforeEach((to, from, next) => {
+    let currentUser = databaseConfig.auth().currentUser;
     const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
 
-    if(requiresAuth && !loggedUser)
-        next('/login')
-    else
-        next()
+    if(requiresAuth && !currentUser) next('/login')
+    else if(!requiresAuth && currentUser) next('/dashboard/show')
+    else next()
+
   })
 
 export {

@@ -48,12 +48,9 @@ export default {
           error:{}
         }
     },
-    components: {
-    },
-
     methods: {
         signIn(){
-           databaseConfig.auth().signInWithEmailAndPassword(this.email, this.password).then(()=>{
+           databaseConfig.auth().signInWithEmailAndPassword(this.email, this.password).then((value)=>{
                this.$router.replace("/dashboard/show")
            }).catch((error)=>{
                this.error = error
