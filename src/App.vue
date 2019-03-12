@@ -28,11 +28,7 @@ export default {
 };
 </script>
 
-<style>
-.section-content {
-  min-height: 640px;
-}
-</style>
+
 
 
 

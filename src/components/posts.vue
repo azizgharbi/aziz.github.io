@@ -43,15 +43,9 @@ export default {
 </script>
 
 <style>
-@media only screen and (min-width: 768px) {
-  .section {
-    min-height: 648px;
-  }
-}
 .container {
   margin-top: 20px;
 }
-
 .card {
   margin-bottom: 10px;
 }

@@ -21,5 +21,10 @@ export default {
 .fa-heart {
   color: #8e44ad;
 }
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 </style>
 

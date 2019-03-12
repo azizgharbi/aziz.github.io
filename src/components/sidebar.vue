@@ -1,6 +1,6 @@
 <template>
   <aside class="menu">
-    <p class="menu-label">Somthing</p>
+    <p class="menu-label">ME IN THREE TABS</p>
     <ul class="menu-list">
       <li>
         <router-link :to="{name: 'home' }">home</router-link>

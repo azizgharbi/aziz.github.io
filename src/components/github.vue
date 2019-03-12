@@ -32,28 +32,16 @@ export default {
       projects: []
     };
   },
-  created() {
-    axios
-      .get("https://api.github.com/users/azizgharbi/repos")
-      .then(response => {
-        this.projects = response.data.filter(el => el.project.fork);
-      });
+  async created() {
+    const posts = axios.get("https://api.github.com/users/azizgharbi/repos");
+    this.projects = posts.data.filter(el => !el.project.fork);
   }
 };
 </script>
 
 <style>
-@media only screen and (min-width: 768px) {
-  .section {
-    min-height: 580px;
-  }
-}
 .container {
   margin-top: 20px;
-}
-
-.card {
-  margin-bottom: 10px;
 }
 .card {
   margin: 10px;
