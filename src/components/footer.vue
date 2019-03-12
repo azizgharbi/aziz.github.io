@@ -1,25 +1,25 @@
 <template>
-    <footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <p>
-        <strong>Build</strong> with <i class="fas fa-heart"></i>. The source code is on Github.
-      </p>
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Build</strong> with
+          <i class="fas fa-heart"></i>. The source code is on Github.
+        </p>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 </template>
 
 <script>
 export default {
-    name: 'Footer'
-}
+  name: "Footer"
+};
 </script>
 
 <style>
-.fa-heart{
+.fa-heart {
   color: #8e44ad;
 }
-
 </style>
 

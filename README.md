@@ -1,21 +1,29 @@
-### Blog build with vue-cli using firebase + admin dashboard
+# my-blog
 
-* vue-cli (vue-router)
-* buefy : [buefy.github.io](https://buefy.github.io/)
-* demo on heroku : [azizgharbi.herokuapp.com](https://azizgharbi.herokuapp.com/)
-
-
-### commande to generate your user
-
+## Project setup
 ```
-node src/console/register.me.js  example@example.com  password
+npm install
 ```
 
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-![Imgur Image](images/home.png)
+### Compiles and minifies for production
+```
+npm run build
+```
 
-![Imgur Image](images/admin.png)
+### Run your tests
+```
+npm run test
+```
 
-![Imgur Image](images/login.png)
+### Lints and fixes files
+```
+npm run lint
+```
 
-
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

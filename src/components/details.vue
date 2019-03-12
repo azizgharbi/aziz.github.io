@@ -1,29 +1,28 @@
 <template>
-<section class="section">
+  <section class="section">
     <div class="content" v-html="post.description"></div>
-<router-link class="button is-link is-small" :to="{name: 'blog' }">
-    <i class="fas fa-angle-left"></i> &nbsp; Go back 
-</router-link>
-</section>
+    <router-link class="button is-link is-small" :to="{name: 'blog' }">
+      <i class="fas fa-angle-left"></i> &nbsp; Go back
+    </router-link>
+  </section>
 </template>
 
 <script>
-import {posts} from './../config/posts.config'
+import { posts } from "./../config/posts.config";
 
 export default {
-  name: 'Details',
-  data(){
-    return{
+  name: "Details",
+  data() {
+    return {
       post: null
-    }
+    };
   },
-   created(){
-        posts.child(this.$route.params.id).once("value", post => {
-            this.post = post.val()
-        })
-
-    }
-}
+  created() {
+    posts.child(this.$route.params.id).once("value", post => {
+      this.post = post.val();
+    });
+  }
+};
 </script>
 
 
