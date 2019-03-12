@@ -5,7 +5,7 @@
       <div class="column is-one-fifth">
         <Sidebar></Sidebar>
       </div>
-      <div class="column">
+      <div class="column section-content">
         <router-view></router-view>
       </div>
     </div>
@@ -27,6 +27,12 @@ export default {
   }
 };
 </script>
+
+<style>
+.section-content {
+  min-height: 640px;
+}
+</style>
 
 
 
